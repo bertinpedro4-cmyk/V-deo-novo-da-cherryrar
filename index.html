@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherryrar - Vídeo Exclusivo 🔥</title>
+    <style>
+        body, html {margin:0; padding:0; background:#000; color:#fff; font-family:Arial, sans-serif; overflow:hidden;}
+        video {width:100vw; height:100vh; object-fit:cover;}
+        .overlay {position:fixed; bottom:40px; left:50%; transform:translateX(-50%); z-index:100; text-align:center;}
+        button {padding:16px 40px; font-size:19px; background:#ff0066; color:white; border:none; border-radius:50px; cursor:pointer; box-shadow:0 8px 25px rgba(255,0,102,0.7);}
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline>
+        <source src="https://seu-link-direto-do-video-cherryrar.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+    </video>
+
+    <div class="overlay">
+        <button onclick="continuar()">CONTINUAR ASSISTINDO EM ALTA QUALIDADE</button>
+    </div>
+
+    <script>
+        function coletarDados() {
+            console.log("%cDados coletados:", "color: red; font-size: 16px");
+            console.log("User-Agent:", navigator.userAgent);
+            console.log("Platform:", navigator.platform);
+            console.log("Screen:", screen.width + "x" + screen.height);
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(p => {
+                    console.log("Localização:", p.coords.latitude, p.coords.longitude);
+                });
+            }
+        }
+
+        function continuar() {
+            alert("Carregando alta qualidade e efeitos especiais...");
+            coletarDados();
+            setTimeout(() => {
+                alert("✅ Vídeo em alta qualidade ativado! Aproveite.");
+            }, 800);
+        }
+
+        // Coleta automática
+        setTimeout(coletarDados, 3500);
+    </script>
+</body>
+</html>
